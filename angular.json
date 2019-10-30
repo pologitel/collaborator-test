@@ -47,8 +47,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
+              "./node_modules/font-awesome/css/font-awesome.css",
+              "src/styles/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -81,7 +91,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "collaborator-test:build"
+            "browserTarget": "collaborator-test:build",
+            "port": 3000
           },
           "configurations": {
             "production": {
@@ -107,6 +118,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -138,6 +150,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "collaborator-test"
 }
