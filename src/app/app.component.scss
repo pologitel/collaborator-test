@@ -1,0 +1,5 @@
+@import "imports";
+
+.main {
+  height: calc(100vh - #{map_get($header_settings, height)});
+}

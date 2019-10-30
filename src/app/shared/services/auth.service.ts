@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { environment } from '@environments/environment';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
+import { WINDOW } from '@shared/providers/window.provider';
 
 interface IDataAuth {
   login: string;
@@ -23,7 +24,7 @@ export class AuthService {
 
   constructor(
     public http: HttpClient,
-    public window: Window
+    @Inject(WINDOW) private window: Window
   ) {
     this.currentUserSubject = new BehaviorSubject<any>(this.window.localStorage.getItem('currentUserInfo'));
     this.currentUser = this.currentUserSubject.asObservable();

@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { TemplateVariablesDirective } from './directives/template-variables.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TemplateVariablesDirective
+  ],
   imports: [
     CommonModule
   ],
